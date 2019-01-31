@@ -19,7 +19,11 @@ export default class Header {
 
     const a = document.createElement('a')
     a.href =
-      process.env.NODE_ENV !== 'production' ? '/' : process.env.PUBLIC_URL
+      process.env.NODE_ENV !== 'production'
+        ? '/'
+        : process.env.PUBLIC_URL === ''
+        ? '/'
+        : process.env.PUBLIC_URL
 
     const title = document.createElement('h1')
     title.innerHTML = routes.title
