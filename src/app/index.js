@@ -4,8 +4,11 @@ import './styles.scss'
 import routes from './routes'
 import page from 'page'
 
+import Header from './Header'
+
 export default class App {
   constructor() {
+    new Header()
     this.router()
   }
 

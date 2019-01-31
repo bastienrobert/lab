@@ -1,14 +1,119 @@
 section {
-  font-family: sans-serif;
-  margin-top: 30px;
-  margin-left: 50px;
-}
+  position: absolute;
+  background-color: $background;
+  width: 100%;
+  min-height: 100%;
 
-h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
+  ul {
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto 0;
+  }
 
-ul {
-  list-style: circle;
+  li {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    background-color: $white;
+    text-decoration: none;
+  }
+
+  h2 {
+    color: $title;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: $text;
+    font-size: 14px;
+  }
+
+  .date {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    color: $sub;
+    font-size: 12px;
+  }
+
+  .state {
+    position: absolute;
+    display: block;
+    right: 15px;
+    bottom: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $yep;
+
+    &.wip {
+      background-color: $nope;
+    }
+  }
+
+  .help {
+    vertical-align: top;
+    width: 150px;
+
+    a {
+      position: relative;
+      color: $sub;
+      box-shadow: none;
+      background: none;
+      overflow: hidden;
+      perspective: 100px;
+
+      &:hover {
+        .circle {
+          transform: translate(-50%, -50%) translateZ(70px);
+        }
+      }
+    }
+
+    .letter,
+    .circle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      padding: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .letter {
+      font-size: 50px;
+      text-align: center;
+    }
+
+    .circle {
+      background-color: $blue;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+  }
+
+  @include breakpoint($sm) {
+    li {
+      width: 50%;
+    }
+  }
+
+  @include breakpoint($md) {
+    li {
+      width: 25%;
+    }
+  }
 }

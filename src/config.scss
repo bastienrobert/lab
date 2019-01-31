@@ -1,1 +1,31 @@
-$blue: #52bcf0;
+//////////////////////////
+//        COLORS        //
+//////////////////////////
+
+$background: #fbfdfd;
+$blue: #f0f7f8;
+
+$title: #3d3d3e;
+$sub: #989899;
+$text: #5a5a5a;
+
+$nope: #ed6960;
+$yep: #67c956;
+
+$white: #fff;
+
+//////////////////////////
+//     BREAKPOINTS      //
+//////////////////////////
+
+$xs: 480;
+$sm: 768;
+$md: 992;
+$lg: 1200;
+$xl: 1441;
+
+@mixin breakpoint($point) {
+  @media (min-width: $point + 'px') {
+    @content;
+  }
+}
