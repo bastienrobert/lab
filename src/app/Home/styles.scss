@@ -7,10 +7,28 @@ section {
   font-family: Helvetica, sans-serif;
   padding-top: 56px;
 
+  nav,
+  ul {
+    max-width: 1200px;
+  }
+
+  nav {
+    margin: 20px auto 0;
+  }
+
+  select {
+    appearance: none;
+    margin: 15px;
+    padding: 8px;
+    background-color: $white;
+    outline: none;
+    border-radius: 0;
+    width: 250px;
+  }
+
   ul {
     position: relative;
-    max-width: 1200px;
-    margin: 20px auto 0;
+    margin: 0 auto;
   }
 
   li {

@@ -97,6 +97,10 @@ module.exports = {
         }
       },
       {
+        test: [/\.vert$/, /\.frag$/],
+        loader: 'webpack-glsl-loader'
+      },
+      {
         test: [/\.scss$/, /\.css$/],
         loader: ExtractTextPlugin.extract(
           Object.assign(

@@ -20,7 +20,7 @@ export default class App {
         process.env.NODE_ENV === 'production'
           ? process.env.PUBLIC_URL + route.path
           : route.path
-      page(path, () => {
+      page(path, ctx => {
         this.header.setBackground(path === process.env.PUBLIC_URL + '/')
 
         this.previousPage = this.currentPage
@@ -29,7 +29,7 @@ export default class App {
           this.previousPage.componentWillUnmount &&
           this.previousPage.componentWillUnmount()
         this.currentPage.componentWillMount &&
-          this.currentPage.componentWillMount()
+          this.currentPage.componentWillMount(ctx)
       })
     })
     page()

@@ -73,6 +73,10 @@ module.exports = {
         include: paths.appSrc
       },
       {
+        test: [/\.vert$/, /\.frag$/],
+        loader: 'webpack-glsl-loader'
+      },
+      {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
         loader: require.resolve('url-loader'),
         options: {
