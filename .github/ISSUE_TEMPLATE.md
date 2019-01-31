@@ -1,3 +1,0 @@
-### Expected behaviour
-
-## Actual behaviour
