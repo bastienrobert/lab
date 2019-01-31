@@ -46,7 +46,7 @@ In your experience, you can add 2 methods:
 
 Install `gh-pages` with `npm i -g gh-pages`.
 
-Then `yarn build`. It's online! 🙃
+Then `yarn deploy`. It's online! 🙃
 
 ## Contributions
 
