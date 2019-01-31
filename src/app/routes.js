@@ -3,7 +3,9 @@ import Template from 'lab/_template'
 
 export default {
   title: 'ThreeJS experiments',
-  opts: {},
+  opts: {
+    ghPages: true
+  },
   routes: [
     {
       path: '/',

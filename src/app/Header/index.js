@@ -11,7 +11,8 @@ export default class Header {
     this.header = document.createElement('header')
 
     const a = document.createElement('a')
-    a.href = '/'
+    a.href =
+      process.env.NODE_ENV !== 'production' ? '/' : process.env.PUBLIC_URL
 
     const title = document.createElement('h1')
     title.innerHTML = routes.title

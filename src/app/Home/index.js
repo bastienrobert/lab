@@ -37,7 +37,10 @@ export default class Home {
     const p = document.createElement('p')
     const state = document.createElement('span')
 
-    a.href = path
+    a.href =
+      process.env.NODE_ENV === 'production'
+        ? process.env.PUBLIC_URL + path
+        : path
     h2.innerHTML = name
     p.innerHTML = description
 

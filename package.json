@@ -1,26 +1,21 @@
 {
-  "name": "Halo",
+  "name": "lab",
   "version": "0.1.0",
-  "description": "Starter for SPA",
+  "description": "Test things",
+  "homepage": "https://bastienrobert.github.io/lab",
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js",
+    "deploy": "npm run-script build && gh-pages -d build"
   },
   "author": "Bastien Robert",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.0.0-beta.54",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/polyfill": "^7.0.0-beta.54",
-    "@bastienrobert/clock": "^1.0.0",
-    "page": "^1.11.4",
-    "promise": "^8.0.1",
-    "reset-css": "^4.0.1",
-    "three": "^0.100.0",
-    "whatwg-fetch": "^2.0.4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0-beta.54",
     "@babel/preset-env": "^7.0.0-beta.54",
+    "@bastienrobert/clock": "^1.0.0",
     "autoprefixer": "^9.0.0",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^8.0.0-beta.4",
@@ -44,17 +39,22 @@
     "node-sass": "^4.8.3",
     "object-assign": "^4.1.1",
     "opn": "^5.3.0",
+    "page": "^1.11.4",
     "postcss-flexbugs-fixes": "^4.0.0",
     "postcss-loader": "^2.1.6",
+    "promise": "^8.0.1",
+    "reset-css": "^4.0.1",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "sw-precache-webpack-plugin": "^0.11.5",
+    "three": "^0.100.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "url-loader": "^1.0.1",
     "webpack": "^4.5.0",
     "webpack-cli": "^2.0.14",
     "webpack-dev-server": "^3.1",
     "webpack-format-messages": "^2.0.3",
-    "webpack-manifest-plugin": "^2.0.3"
+    "webpack-manifest-plugin": "^2.0.3",
+    "whatwg-fetch": "^2.0.4"
   }
 }

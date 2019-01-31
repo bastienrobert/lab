@@ -17,10 +17,13 @@ export default class App {
     this.previousPage = null
 
     routes.routes.forEach(route => {
-      const { path, component } = route
+      let path =
+        process.env.NODE_ENV === 'production'
+          ? process.env.PUBLIC_URL + route.path
+          : route.path
       page(path, () => {
         this.previousPage = this.currentPage
-        this.currentPage = new component()
+        this.currentPage = new route.component()
         this.previousPage &&
           this.previousPage.componentWillUnmount &&
           this.previousPage.componentWillUnmount()
