@@ -30,23 +30,21 @@ export default class App {
     this.camera.position.set(5, 5, 5)
     this.controls.update()
 
+    // Set aspect ratios
     this.onResize()
-
     // Create floor
     this.createFloor()
-
     // Listen events
     this.listen()
-
     // Helpers
     this.helpers()
-
     // RAF
     this.animate()
   }
 
   componentWillUnmount() {
     this.unlisten()
+    window.cancelAnimationFrame(this.raf)
     document.body.removeChild(this.renderer.domElement)
   }
 
@@ -74,7 +72,7 @@ export default class App {
   }
 
   animate = () => {
-    requestAnimationFrame(this.animate)
+    this.raf = requestAnimationFrame(this.animate)
 
     this.controls.update()
     this.renderer.render(this.scene, this.camera)
