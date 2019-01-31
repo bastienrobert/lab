@@ -1,4 +1,4 @@
-# Lab
+# Lab 🎸
 
 Test things.
 
