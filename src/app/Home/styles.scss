@@ -1,14 +1,16 @@
 section {
   position: absolute;
+  box-sizing: border-box;
   background-color: $background;
   width: 100%;
   min-height: 100%;
   font-family: Helvetica, sans-serif;
+  padding-top: 56px;
 
   ul {
     position: relative;
     max-width: 1200px;
-    margin: 50px auto 0;
+    margin: 20px auto 0;
   }
 
   li {

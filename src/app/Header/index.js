@@ -1,10 +1,17 @@
-import './styles.scss'
+import css from './styles.scss'
 
 import routes from '../routes'
 
 export default class Header {
   constructor() {
     this.createDOM()
+    this.background = false
+  }
+
+  setBackground(background) {
+    if (this.background === background) return
+    this.header.className = background ? css.background : ''
+    this.background = background
   }
 
   createDOM() {

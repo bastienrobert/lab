@@ -2,7 +2,7 @@ import Home from './Home'
 import Template from 'lab/_template'
 
 export default {
-  title: 'ThreeJS experiments',
+  title: '👨🏻‍🔬',
   opts: {
     ghPages: true
   },

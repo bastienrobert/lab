@@ -1,5 +1,4 @@
 import 'reset-css'
-import './styles.scss'
 
 import routes from './routes'
 import page from 'page'
@@ -8,7 +7,7 @@ import Header from './Header'
 
 export default class App {
   constructor() {
-    new Header()
+    this.header = new Header()
     this.router()
   }
 
@@ -22,6 +21,8 @@ export default class App {
           ? process.env.PUBLIC_URL + route.path
           : route.path
       page(path, () => {
+        this.header.setBackground(path === process.env.PUBLIC_URL + '/')
+
         this.previousPage = this.currentPage
         this.currentPage = new route.component()
         this.previousPage &&
