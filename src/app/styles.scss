@@ -1,4 +1,9 @@
 :global {
+  html,
+  body {
+    overflow: hidden;
+  }
+
   .dg.main {
     position: relative;
     z-index: 999;
