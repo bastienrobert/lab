@@ -1,4 +1,5 @@
 import 'reset-css'
+import './styles.scss'
 
 import routes from './routes'
 import page from 'page'

@@ -28,6 +28,8 @@ section {
 
   ul {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
   }
 

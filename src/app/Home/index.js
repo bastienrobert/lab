@@ -5,6 +5,8 @@ import page from 'page'
 import routes from 'app/routes'
 import { querystringToObject } from 'utils/helpers'
 
+// I know, this is horrible but it's just a lab so 🤷 who cares?
+
 export default class Home {
   componentWillMount(ctx) {
     this.query = querystringToObject(ctx.querystring)
@@ -104,7 +106,7 @@ export default class Home {
     const letter = document.createElement('span')
     const circle = document.createElement('span')
     li.className = css.help
-    a.href = 'https://github.com/bastienrobert/threejs-lab#'
+    a.href = 'https://github.com/bastienrobert/lab'
     a.target = '_blank'
     letter.className = css.letter
     letter.innerHTML = '?'
